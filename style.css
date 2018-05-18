@@ -88,10 +88,9 @@ input:focus {
   box-shadow: 0px .5px 5px .3px rgba(87, 86, 86, 0.582);
 }
 
-#button-add:focus{
+button:focus{
   outline: none;
 }
-
 
 .delete-button{
   margin: .5rem 0;
