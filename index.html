@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoModule">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+
+  <section id="todo-container" ng-controller="TodoCtrl as todo">
+    <h1>TODO List</h1>
+    <h2>A place to store the things you have to do!</h2>
+    <input id="filter-todo"type="text" placeholder="Filter your to-dos">
+
+    <!-- this is the element that gets repeated with ng-repeat -->
+    <div class="todo-container-todos" ng-repeat="item in todo.list"> 
+      <p class="index">{{$index + 1}}.  </p>
+      <button class="button-complete" ng-if="item.completed === false">Complete</button>
+      <p class="todo-item" ng-class="{'completed':item.completed === true}">{{item.task}}</p>
+      <img src="close.svg"class="delete-button">
+    </div>
+
+    <input id="add-todo"type="text" placeholder="Add your to-do">
+    <button id="button-add" type="button" >Add</button>
+  </section>
+
+  <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+  <script src="module.js"></script>
+  <script src="controller.js"></script>
+  
+</body>
+</html>

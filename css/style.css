@@ -1,0 +1,119 @@
+html{
+  font-size: 62.5%;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #f857a6, #ff5858);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  margin: .5rem 0;
+  font-size: 4rem;
+}
+
+h2{
+  margin-top: 0rem;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#todo-container{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 5rem auto;
+  width: 30rem;
+  background-color: white;
+  border-radius: 1rem;
+  Box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  font-size: 1.4rem;
+}
+input {
+  height: 3rem;
+  border-radius: .5rem;
+  margin: .5rem 0;
+  border: 1px solid #bbb;
+  padding: .5rem;
+  font-size: 1.4rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1.2px solid rgb(126, 122, 122);
+}
+
+.todo-container-todos {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: none;
+ justify-content: space-between;
+ font-size: 1.4rem;
+ align-items: center;
+ margin-top: 0;
+}
+
+.todo-item {
+  width: 75%;
+  margin: .5rem 0;
+}
+
+.index{
+  margin: .5rem;
+}
+
+.button-complete {
+  color: #ff69b4;
+  height: 3rem;
+  border: 1px solid #ff69b4;
+  padding: .5rem;
+  border-radius: .5rem;
+  margin: .5rem;  
+}
+
+#button-add {
+  margin: 1rem 0;
+  width: 100%;
+  height: 3.7rem;
+  border-radius: .5rem;
+  color: white;
+  background-color: #ff69b4;
+  font-size: 1.4rem;
+}
+
+#button-add:active{
+  transform: translateY(3px);
+  box-shadow: 0px .5px 5px .3px rgba(87, 86, 86, 0.582);
+}
+
+#button-add:focus{
+  outline: none;
+}
+
+
+.delete-button{
+  margin: .5rem 0;
+  transition: .15s all ease-in;
+}
+
+.delete-button:hover{
+  cursor: pointer;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.completed{
+  text-decoration: line-through;
+  width: 88%;
+}
+
+
+@media only screen and (min-width: 768px){
+  #todo-container{
+    width: 45rem;
+  }
+}
