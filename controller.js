@@ -25,6 +25,32 @@ function TodoCtrl(){
         completed: false
       }
   ]
+
+  vm.addItem = function(input) {
+
+    vm.newTodo = {
+      task: input,
+      completed: false
+    }
+
+    vm.list.push(vm.newTodo);
+    vm.input = "";
+    console.log(vm.newTodo);
+    
+  }
+
+  vm.deleteItem = function($index, item) {
+    console.log($index, item);
+    vm.list.splice($index, 1);
+  }
+
+  vm.completeItem = function($index, item){
+    console.log("complete button working");
+    item.completed = true;
+  }
+
+
+
 }
 
 

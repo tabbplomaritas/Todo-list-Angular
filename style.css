@@ -31,7 +31,8 @@ h2{
   Box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   font-size: 1.4rem;
 }
-input {
+
+.input {
   height: 3rem;
   border-radius: .5rem;
   margin: .5rem 0;
@@ -40,7 +41,7 @@ input {
   font-size: 1.4rem;
 }
 
-input:focus {
+.input:focus {
   outline: none;
   border: 1.2px solid rgb(126, 122, 122);
 }
