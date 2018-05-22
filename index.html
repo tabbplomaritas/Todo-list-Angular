@@ -17,20 +17,21 @@
     <input class="input" ng-model="filterTodos" id="filter-todo"type="text" placeholder="Filter your to-dos">
 
     <!-- this is the element that gets repeated with ng-repeat -->
-    <div class="todo-container-todos" ng-repeat="item in todo.list | filter: filterTodos | orderBy: 'completed'"> 
-      <!-- the number for the task -->
-      <p class="index">{{$index + 1}}. </p>
-      <!-- complete button for users to click when task is accomplished (should change the appearence of the actual task item as well as hide this button) -->
-      <button ng-click="todo.completeItem($index, item)" class="button-complete" ng-if="item.completed === false">Complete</button>
-      <!-- the actual task to do -->
-      <p class="todo-item" ng-class="{'completed':item.completed === true}">{{item.task}}</p>
-      <!-- delete button, should remove the task entirely from the list -->
-      <img ng-click="todo.deleteItem(item)" src="close.svg" class="delete-button">
-    </div>
+    <form ng-submit="todo.addItem(todo.input)">
+      <div class="todo-container-todos" ng-repeat="item in todo.list | filter: filterTodos | orderBy: 'completed'"> 
+        <!-- the number for the task -->
+        <p class="index">{{$index + 1}}. </p>
+        <!-- complete button for users to click when task is accomplished (should change the appearence of the actual task item as well as hide this button) -->
+        <button type="button" ng-click="todo.completeItem($index, item)" class="button-complete" ng-if="item.completed === false">Complete</button>
+        <!-- the actual task to do -->
+        <p class="todo-item" ng-class="{'completed':item.completed === true}">{{item.task}}</p>
+        <!-- delete button, should remove the task entirely from the list -->
+        <img ng-click="todo.deleteItem(item)" src="close.svg" class="delete-button">
+      </div>
 
     <input class="input" ng-model="todo.input" id="add-todo" type="text" placeholder="Add your to-do">
-    <button id="button-add" type="submit" ng-click="todo.addItem(todo.input)" >Add</button>
-
+    <button id="button-add" type="button" ng-click="ng-submit" >Add</button>
+  </form>
   </section>
 
   <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
