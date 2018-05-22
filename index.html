@@ -25,7 +25,7 @@
       <!-- the actual task to do -->
       <p class="todo-item" ng-class="{'completed':item.completed === true}">{{item.task}}</p>
       <!-- delete button, should remove the task entirely from the list -->
-      <img ng-click="todo.deleteItem($index, item)" src="close.svg" class="delete-button">
+      <img ng-click="todo.deleteItem(item)" src="close.svg" class="delete-button">
     </div>
 
     <input class="input" ng-model="todo.input" id="add-todo" type="text" placeholder="Add your to-do">
