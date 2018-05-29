@@ -28,6 +28,8 @@ function TodoCtrl(){
   ]
 
   vm.addItem = function(input) {
+    console.log("button working");
+    
     //set up a new object using the arguments passed in from the view
     vm.newTodo = {
       task: input,
@@ -40,9 +42,9 @@ function TodoCtrl(){
   }
 
   vm.deleteItem = function(item) {
-    console.log(`item name is: ${item.task}`);
+    // console.log(`item name is: ${item.task}`);
     let index = vm.list.indexOf(item);
-    console.log(`the index is ${index}`);
+    // console.log(`the index is ${index}`);
     vm.list.splice(index, 1);
     
   }
